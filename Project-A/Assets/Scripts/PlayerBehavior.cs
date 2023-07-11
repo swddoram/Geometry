@@ -22,18 +22,18 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
 
-        //Player 좌표이동
+        //Player ????????
         PlayerMove(Player);
 
-        //Player 이동 애니메이터
+        //Player ???? ??????????
         PlayerAnimatorController(PlayerAnimator);
 
-        //Camera 좌표이동
+        //Camera ????????
         CameraMove(Camera, Player);
 
     }
 
-    //Player 좌표이동
+    //Player ????????
     public void PlayerMove(GameObject Player)
     {
         if (Input.GetKey(KeyCode.W))
@@ -119,10 +119,10 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
-    //Player 이동 애니메이터
+    //Player ???? ??????????
     public void PlayerAnimatorController(Animator PlayerAnimator)
     {
-        //전진 후진
+        //???? ????
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
         {
             PlayerAnimator.SetBool("GetKeyMoveF", false);
@@ -195,7 +195,7 @@ public class PlayerBehavior : MonoBehaviour
             PlayerAnimator.SetBool("GetKeyMoveR", false);
         }
 
-        ////전진 후진 동시
+        ////???? ???? ????
         //if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
         //{
         //    PlayerAnimator.SetBool("GetKeyMoveF&B", true);
@@ -204,7 +204,7 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
-    //Camera 좌표이동
+    //Camera ????????
     public void CameraMove(GameObject Camera, GameObject Player)
     {
         Camera.transform.position = new Vector3(Player.transform.position.x + CameraDistanceX, Player.transform.position.y + CameraDistanceY, Player.transform.position.z + CameraDistanceZ);
